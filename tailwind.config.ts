@@ -13,7 +13,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary:"var(--primary)",
+        secondary:"var(--secondary)",
+        tertionary:"var(--tertionary)"
+
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        Manrope:['Manrope','sans-serif']
+      }
     },
   },
   plugins: [],
