@@ -1,61 +1,80 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
 
-const Search: React.FC = () => {
-  const [serviceName, setServiceName] = useState("");
-  const [address, setAddress] = useState("");
+import { useState } from "react"
+
+export default function Search() {
+  const [serviceName, setServiceName] = useState("")
+  const [address, setAddress] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Search submitted:", { serviceName, address });
-  };
+    e.preventDefault()
+    console.log("Search submitted:", { serviceName, address })
+  }
 
   return (
-    <div className="flex items-center justify-center h-100 w-full pl-6 ">
+    <div className="w-full px-4 py-6 md:px-6">
       <form 
         onSubmit={handleSubmit} 
-        className="flex justify-center items-center bg-tertionary rounded-full py-6 w-949 h-20 gap-46 px-6 -ml-80 pr-1 -mr-96 pr-2.5 "
+        className="mx-auto max-w-5xl rounded-full bg-white p-12  shadow-lg flex flex-col md:flex-row items-end gap-4 px-16 pt-3 py-10 pb-5"
       >
-        <div className="flex justify-center items-center grid md:grid-cols-2 md:gap-6 pt-4">
-          <div className="relative z-0 mb-15 ml-2 group">
-            <label className="text-primary font-=inter .text-lg w-700 font-size:18 line-height: 21.78 font-semibold">Service Name</label>
-            <div className="relative flex items-center pb-5">
+        <div className="w-full flex flex-col md:flex-row gap-6 flex-1">
+          
+          <div className="w-full md:w-1/2">
+            <label 
+              htmlFor="service-name"
+              className="block mb-2  font-semibold text-primary text-lg"
+            >
+              Service Name
+            </label>
+            <div className="relative">
               <input
-                className="placeholder-black block w-full pr-8 py-1 px-0 text-sm text-secondary bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-secondary dark:border-gray-600 dark:focus:border-secondary focus:outline-none focus:ring-0 focus:border-secondary peer"
+                id="service-name"
+                type="text"
+                className="w-full border-b-2 border-secondary bg-transparent pb-2 pl-2 pr-10 text-sm text-secondary placeholder-secondary transition-colors focus:border-rose-400 focus:outline-none"
                 placeholder="Book your services..."
-                required
                 value={serviceName}
                 onChange={(e) => setServiceName(e.target.value)}
-              />
-              <img className="color-black" src="search.png" alt="" />
-            </div>  
-          </div>
-          <div className="relative z-0 mb-15 group pb-5">
-            <label className="text-primary font-inter text-lg w-700 font-size:18 line-height: 21.78 font-semibold">Address</label>
-            <div className="relative flex items-center">
-              <input
-                className="placeholder-black block w-full pr-8 py-1 px-0 text-sm text-secondary bg-transparent border-0 border-b-2 border-secondary appearance-none dark:text-secondary dark:border-secondary dark:focus:border-secondary focus:outline-none focus:ring-0 focus:border-secondary peer"
-                placeholder="Where"
                 required
+              />
+               <img className="h-5 w-5 text-gray-400 absolute right-2 bottom-2" src="search.png" alt="" />
+            </div>
+          </div>
+
+        
+          <div className="w-full md:w-1/2">
+            <label 
+              htmlFor="address"
+              className="block mb-2  font-semibold text-primary text-lg"
+            >
+              Address
+            </label>
+            <div className="relative">
+              <input
+                id="address"
+                type="text"
+                className="w-full border-b-2 border-secondary bg-transparent pb-2 pl-2 pr-10 text-sm text-secondary placeholder-secondary transition-colors focus:border-rose-400 focus:outline-none"
+                placeholder="Where"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
+                required
               />
-              <img   src="location.png" alt="" />
+              <img  className="h-5 w-5 text-gray-400 absolute right-2 bottom-2 "  src="location.png" alt="" />
             </div>
           </div>
         </div>
+
+       
         <button
           type="submit"
-          className=" text-2xl font-Manrope  ml-8 w-211 h-33 w-81 flex items-center justify-center px-10 py-4 bg-primary text-white font-medium rounded-full shadow hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary font-size:24 line-height: 32.78  w-600"
+          className=" pt-6 text-2xl gap-6 -mr-1.5 pr-20 md:w-auto whitespace-nowrap rounded-full bg-primary px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 flex items-center justify-center gap-2"
         >
           Search
-          <img className="w-21.97 h-21.97 top-1.6  left-1.6 .text-white pl-10  "
+          <img className="h-5 w-5"
            src="vector.png" alt="" />
         </button>
       </form>
     </div>
-  ); 
-};
+  )
+}
 
-export default Search;
