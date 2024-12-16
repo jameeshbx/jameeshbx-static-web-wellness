@@ -1,3 +1,4 @@
+import { Playfair_Display } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -18,13 +19,21 @@ const config: Config = {
         light: "var(--light)",
         primary:"var(--primary)",
         secondary:"var(--secondary)",
-        tertionary:"var(--tertionary)"
+        tertionary:"var(--tertionary)",
+        info:"var(--info)",
+        grey:"var(--grey)"
       },
       fontFamily: {
         slab: ['"Port Lligat Slab"', 'serif'], 
         inter: ['Inter', 'sans-serif'],
-        Manrope:['Manrope','sans-serif']
-      }
+        Manrope:['Manrope','sans-serif'],
+        Playfair_Display:['Playfair Display','sans-serif']
+      },
+      spacing: {
+        '187': '187px',
+        '28': '28px',
+      },
+      
     },
   },
   plugins: [],
