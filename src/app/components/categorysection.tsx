@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export function CategorySection() {
   const icons = [
-    { src: '/make up artist.png', alt: 'Icon 1', title: 'Makeup-artist' },
+    { src: '/makeup.png', alt: 'Icon 1', title: 'Makeup-artist' },
     { src: '/wellness center.png', alt: 'Icon 2', title: 'Wellness-center' },
     { src: '/hair cut.png', alt: 'Icon 3', title: 'Barber-salon' },
     { src: '/hair saloon.png', alt: 'Icon 4', title: 'Hair-Salon' },
@@ -39,7 +39,7 @@ export function CategorySection() {
         </button>
 
         <div className="flex flex-col items-center text-center rounded-lg">
-          <div className="w-35 h-20 relative">
+          <div className="w-30 h-20 relative">
             <Image
               src={icons[currentIndex].src}
               alt={icons[currentIndex].alt}
