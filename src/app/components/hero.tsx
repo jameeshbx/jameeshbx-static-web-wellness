@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchForm from './search'
 
 export function Hero () {
   return (
@@ -20,7 +21,9 @@ export function Hero () {
       There are many variations of passages of ipsum available, the
       majority have suffered alteration in some form.
     </p>
+    <SearchForm />
   </div>
+  
 </div>
 <div className="relative w-full lg:w-3/4 min-h-screen sm:h-96 lg:h-auto bg-center bg-cover bg-no-repeat bg-[url('https://s3-alpha-sig.figma.com/img/2c2a/f79a/e0378b7798af588ba9c3ca84208df851?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JYIDC31nWSSgIWNbnXt3j8oziGDJzl6jtAATljS7nZ1oFV6C2aK18R4DZAR5ZaabDaYb~E1vaP62aXcr9-C~0vhNyX0kfYGmjI4MeDVmyUfU1OjjtceBwA8mmAU5t5z1Hln1Ml~oZrkwf82TzMe27XS0yJUM22e3e1vdypyJW1mkIBnTJVDpo7Bbu9mLHzuBQv9N298gsn4DFPbKwvW9bgkQ-j9PZLa5cVfyeJm7Cqu3fMTPH82pE3qJfPFQvVY18jsgltrh6vDDDtWS~IlM5pwyHY6AOXfkZbmUo2qfY75exS6S6wd3Q3P2P0jIuWakll3xLQJ-Rn0Sm8XIF89l7A__')] bg-blend-multiply">
 
