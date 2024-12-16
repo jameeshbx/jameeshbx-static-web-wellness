@@ -13,13 +13,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "var(--primary)",
-        secondary: "var(--secondary)"
+        primary:"var(--primary)",
+        secondary:"var(--secondary)",
+        tertionary:"var(--tertionary)"
       },
       fontFamily: {
         slab: ['"Port Lligat Slab"', 'serif'], 
-        manrope: ['var(--font-manrope)', 'sans-serif'],
-      },
+        inter: ['Inter', 'sans-serif'],
+        Manrope:['Manrope','sans-serif']
+      }
     },
   },
   plugins: [],
