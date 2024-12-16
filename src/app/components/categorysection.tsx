@@ -23,8 +23,8 @@ export function CategorySection() {
   };
 
   return (
-    <div className="bg-white h-screen py-10">
-      {/* Mobile View Carousel */}
+    <div className="bg-white  py-10">
+     
       <div className="flex items-center justify-between w-full px-4 sm:hidden">
         <button className="p-2" onClick={handlePrev}>
           <svg
@@ -66,7 +66,6 @@ export function CategorySection() {
         </button>
       </div>
 
-      {/* Desktop View Grid */}
       <div className="hidden sm:flex items-center justify-between w-full px-10">
         <button className="p-2">
           <svg
