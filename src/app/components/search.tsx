@@ -16,7 +16,7 @@ export default function SearchForm() {
     <div className="w-full px-4 py-6 md:px-6 ">
        <form
         onSubmit={handleSubmit}
-        className="-mr-6 -ml-5 py-6 pl-12 pr-8 mx-auto max-w-5xl rounded-full bg-white shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6"
+        className="-mr-6 -ml-5 py-6 pl-12 pr-8 mx-auto max-w-5xl rounded-none md:rounded-full bg-white shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6"
       >
   <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6 flex-1">
     <div className="w-full md:w-1/2">
