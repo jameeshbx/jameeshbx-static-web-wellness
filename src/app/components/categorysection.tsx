@@ -48,7 +48,7 @@ export function CategorySection() {
               className="object-contain"
             />
           </div>
-          <h3 className="font-manrope text-primarytext mt-2">
+          <h3 className="font-manrope text-primarytext font-black mt-2">
             {icons[currentIndex].title}
           </h3>
         </div>
@@ -95,7 +95,7 @@ export function CategorySection() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="font-manrope text-primarytext">{icon.title}</h3>
+              <h3 className="font-manrope text-primarytext font-black">{icon.title}</h3>
             </div>
           ))}
         </div>
