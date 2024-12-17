@@ -20,6 +20,7 @@ const config: Config = {
         primary:"var(--primary)",
         secondary:"var(--secondary)",
         tertionary:"var(--tertionary)",
+        lightblue: "var(--lightblue)",
         info:"var(--info)",
         grey:"var(--grey)",
         primarytext: "var(--primarytext)",
@@ -28,7 +29,12 @@ const config: Config = {
         slab: ['"Port Lligat Slab"', 'serif'], 
         inter: ['Inter', 'sans-serif'],
         Manrope:['Manrope','sans-serif'],
-        Playfair:['"Playfair Display"','sans-serif']
+        playfair: ["Playfair Display", "serif"],
+        Playfair_Display:['Playfair Display','sans-serif'],
+        Playfair:['Playfair Display','sans-serif'],
+      },
+      height: {
+        '98': '435px',
       },
       spacing: {
         '187': '187px',
