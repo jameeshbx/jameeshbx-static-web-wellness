@@ -13,6 +13,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primarytext: "var(--primarytext)",
+        secondary: "var(--secondary)"
+      },
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
       },
     },
   },

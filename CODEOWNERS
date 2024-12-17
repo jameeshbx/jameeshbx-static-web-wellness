@@ -1,0 +1,7 @@
+# CODEOWNERS file
+
+# Only owners for README.md
+README.md @owner_jameeshbx
+
+# Owners and developers for all other files
+* @owner_jameeshbx @developer_AnandBuyExchange @developer_NishaMol-BuyEx
