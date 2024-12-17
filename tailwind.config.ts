@@ -21,13 +21,14 @@ const config: Config = {
         secondary:"var(--secondary)",
         tertionary:"var(--tertionary)",
         info:"var(--info)",
-        grey:"var(--grey)"
+        grey:"var(--grey)",
+        primarytext: "var(--primarytext)",
       },
       fontFamily: {
         slab: ['"Port Lligat Slab"', 'serif'], 
         inter: ['Inter', 'sans-serif'],
         Manrope:['Manrope','sans-serif'],
-        Playfair_Display:['Playfair Display','sans-serif']
+        Playfair:['Playfair Display','sans-serif']
       },
       spacing: {
         '187': '187px',
