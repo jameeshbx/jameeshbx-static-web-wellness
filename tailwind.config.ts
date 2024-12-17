@@ -28,13 +28,12 @@ const config: Config = {
         slab: ['"Port Lligat Slab"', 'serif'], 
         inter: ['Inter', 'sans-serif'],
         Manrope:['Manrope','sans-serif'],
-        Playfair:['Playfair Display','sans-serif']
+        Playfair:['"Playfair Display"','sans-serif']
       },
       spacing: {
         '187': '187px',
         '28': '28px',
       },
-      
     },
   },
   plugins: [],
