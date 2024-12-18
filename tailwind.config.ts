@@ -31,7 +31,7 @@ const config: Config = {
         inter: ['Inter', 'sans-serif'],
         Manrope:['Manrope','sans-serif'],
         playfair: ['"Playfair Display"', 'serif'],
-        Playfair_Display:['Playfair Display','sans-serif'],
+        Playfair:['"Playfair Display"','sans-serif']
       },
       height: {
         '98': '435px',
