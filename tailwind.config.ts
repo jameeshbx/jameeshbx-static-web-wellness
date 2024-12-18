@@ -30,7 +30,7 @@ const config: Config = {
         slab: ['"Port Lligat Slab"', 'serif'], 
         inter: ['Inter', 'sans-serif'],
         Manrope:['Manrope','sans-serif'],
-        playfair: ["Playfair Display", "serif"],
+        playfair: ['"Playfair Display"', 'serif'],
         Playfair_Display:['Playfair Display','sans-serif'],
       },
       height: {
