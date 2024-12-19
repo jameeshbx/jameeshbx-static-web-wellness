@@ -40,6 +40,9 @@ const config: Config = {
         '187': '187px',
         '28': '28px',
       },
+      width: {
+        '40p': '40%', 
+      },
     },
   },
   plugins: [],
