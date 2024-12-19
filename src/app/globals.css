@@ -16,6 +16,7 @@
   --grey: #555555;
   --lightblue: #EBF3F580;
   --primarytext: #422A3C;
+  --cream: #F6EBD6;
 }
 
 @media (prefers-color-scheme: dark) {

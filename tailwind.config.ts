@@ -25,6 +25,7 @@ const config: Config = {
         info:"var(--info)",
         grey:"var(--grey)",
         primarytext: "var(--primarytext)",
+        cream: "var(--cream)"
       },
       fontFamily: {
         slab: ['"Port Lligat Slab"', 'serif'], 
