@@ -25,6 +25,8 @@ const config: Config = {
         info:"var(--info)",
         grey:"var(--grey)",
         primarytext: "var(--primarytext)",
+        pink:"var(--pink)",
+        darkpink:"var(--darkpink)",
         cream: "var(--cream)"
       },
       fontFamily: {
