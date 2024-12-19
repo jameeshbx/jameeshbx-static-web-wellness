@@ -21,7 +21,10 @@ const config: Config = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         Manrope:['Manrope','sans-serif']
-      }
+      },
+      width: {
+        '40p': '40%', 
+      },
     },
   },
   plugins: [],
