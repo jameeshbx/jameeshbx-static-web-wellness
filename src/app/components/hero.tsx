@@ -1,5 +1,5 @@
 import React from 'react'
-
+import TestimonialSection from './TestimonialSection'
 import Searchsection from './Searchsection'
 
 export function Hero() {
