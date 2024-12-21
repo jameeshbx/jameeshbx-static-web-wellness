@@ -45,6 +45,7 @@ const config: Config = {
       },
       width: {
         '40p': '40%', 
+        '900':'900px'
       },
     },
   },
