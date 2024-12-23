@@ -30,7 +30,6 @@ const config: Config = {
         darkpink:"var(--darkpink)",
         cream: "var(--cream)",
         darkblue:"var(--darkblue)",
-        cream: "var(--cream)",
         lightpink: "var(--lightpink)",
       },
       fontFamily: {

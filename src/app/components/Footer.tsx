@@ -3,6 +3,11 @@ import React from 'react';
 import { links, contactDetails, socialMedia } from '../data/footer';
 import { UrlObject } from 'url';
 
+interface ExploreLink {
+  href: string | UrlObject;
+  label: React.ReactNode;
+}
+
 function Footer() {
   return (
     <div>
@@ -21,22 +26,22 @@ function Footer() {
             </div>
 
             <div className="flex items-center justify-center sm:ml-auto gap-4 sm:gap-6 md:gap-4 p-2 sm:p-4 lg:pr-16 flex-wrap">
-  {socialMedia.map((social, index) => (
-    <a
-      key={index}
-      href={social.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border-2 border-lightpink text-white flex items-center justify-center"
-    >
-      <img
-        src={social.icon}
-        alt="social icon"
-        className=" object-contain"
-      />
-    </a>
-  ))}
-</div>
+              {socialMedia.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border-2 border-lightpink text-white flex items-center justify-center"
+                >
+                  <img
+                    src={social.icon}
+                    alt="social icon"
+                    className=" object-contain"
+                  />
+                </a>
+              ))}
+            </div>
 
           </div>
 
@@ -44,12 +49,12 @@ function Footer() {
             <div className="p-4 md:p-6 lg:p-4 lg:pl-14">
               <h3 className="text-white text-lg font-playfair font-semibold mb-4">Explore</h3>
               <ul className="space-y-2">
-                {links.explore.map((link: { href: string | UrlObject; label: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; }, index: React.Key | null | undefined) => (
+                {links.explore.map((link: ExploreLink, index: number) => (
                   <li key={index}>
                     <Link href={link.href} className="hover:text-white transition-colors duration-300">
-                    
-                        {link.label}
-                     
+
+                      {link.label}
+
                     </Link>
                   </li>
                 ))}
@@ -57,12 +62,12 @@ function Footer() {
             </div>
 
             <div className="p-4 md:p-6 lg:p-4 lg:pl-16">
-<h3 className="text-white text-lg font-playfair font-semibold mb-4">Utility Pages</h3>
-<ul className="space-y-2">
-    <li className="hover:text-white transition-colors duration-300">Privacy Policy</li>
-    <li className="hover:text-white transition-colors duration-300">Terms of Use</li>
-</ul>
-</div>
+              <h3 className="text-white text-lg font-playfair font-semibold mb-4">Utility Pages</h3>
+              <ul className="space-y-2">
+                <li className="hover:text-white transition-colors duration-300">Privacy Policy</li>
+                <li className="hover:text-white transition-colors duration-300">Terms of Use</li>
+              </ul>
+            </div>
 
             <div className="p-4 md:p-6 lg:p-4 lg:pl-16">
               <h3 className="text-white text-lg font-playfair font-semibold mb-4">Keep in Touch</h3>
