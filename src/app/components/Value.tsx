@@ -8,10 +8,10 @@ const ValueSection = () => {
   return (
     <section className="py-12 sm:py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <p className="text-center font-Manrope text-primary uppercase tracking-wide text-sm sm:text-base leading-6 tracking-widest mb-4">
+        <p className="text-center font-manrope text-primary uppercase tracking-wide text-sm sm:text-base leading-6 tracking-widest mb-4">
           {subtitle}
         </p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair leading-tight sm:leading-10 tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair  leading-tight sm:leading-10 tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
           {title}
         </h2>
 
@@ -28,10 +28,10 @@ const ValueSection = () => {
                   />
                 </div>
                 <div className="text-center sm:text-left">
-                  <h3 className="font-playfair text-lg sm:text-xl font-bold leading-6 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold font-playfair leading-6 mb-2">
                     {value.title}
                   </h3>
-                  <p className="font-Manrope text-grey leading-relaxed text-sm sm:text-base">
+                  <p className="font-manrope text-grey leading-relaxed text-sm sm:text-base">
                     {value.description}
                   </p>
                 </div>

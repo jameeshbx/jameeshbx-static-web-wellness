@@ -27,7 +27,7 @@ function Footer() {
       href={social.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border-2 border-pink-300 text-white flex items-center justify-center"
+      className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border-2 border-lightpink text-white flex items-center justify-center"
     >
       <img
         src={social.icon}

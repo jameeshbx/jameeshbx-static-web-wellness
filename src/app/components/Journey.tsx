@@ -18,13 +18,13 @@ export default function JourneySection() {
           {/* Left Content */}
           <div className="space-y-8 px-4">
             <div>
-              <p className="font-Manrope text-primary uppercase tracking-widest text-sm sm:text-base mb-4">
+              <p className="font-manrope text-primary uppercase tracking-widest text-sm sm:text-base mb-4">
                 {subtitle}
               </p>
               <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-primarytext">
                 {title}
               </h2>
-              <p className="font-Manrope text-primarytext text-sm sm:text-base leading-relaxed">
+              <p className="font-manrope text-primarytext text-sm sm:text-base leading-relaxed">
                 {description}
               </p>
             </div>
@@ -47,7 +47,7 @@ export default function JourneySection() {
                       <h4 className="font-playfair font-semibold text-lg mb-2">
                         {step.title}
                       </h4>
-                      <p className="font-Manrope text-grey text-sm sm:text-base">
+                      <p className="font-manrope text-grey text-sm sm:text-base">
                         {step.description}
                       </p>
                     </div>
@@ -58,7 +58,7 @@ export default function JourneySection() {
           </div>
 
           {/* Right Content - Video Section */}
-          <div className="relative lg:w-full lg:aspect-video lg:h-full overflow-hidden mt-8 lg:mt-0">
+          <div className="flex items-end justify-end lg:w-full lg:aspect-video lg:h-full overflow-hidden mt-8 lg:mt-0 lg:ml-20">
             <img
               src={videoThumbnail.src}
               alt={videoThumbnail.alt}

@@ -13,10 +13,10 @@ const Home = () => {
     <div>
       <CookieConsent/>
       <Hero/>
-     <TestimonialSection/>
       <CategorySection/>
       <Gallery/>      
       <RecommendedSection/>
+      <TestimonialSection/>
       <Email/>
     </div>
   );

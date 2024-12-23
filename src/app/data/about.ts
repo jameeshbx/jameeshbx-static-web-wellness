@@ -78,19 +78,19 @@ export const methodologySteps = [
       heading: "Our Methodology :",
       steps: [
         {
-          title: "Step 1: Research",
+          title: "The Assessment Stage",
           description:
-            "Understanding the pain points of consumers and small businesses to create a user-friendly solution.",
+            "The point of using Lorem Ipsum is that it has a more-or-less normal letters.",
         },
         {
-          title: "Step 2: Development",
+          title: "The Initialisation Stage",
           description:
-            "Building a robust platform with advanced features to meet the needs of both service providers and consumers.",
+            "The point of using Lorem Ipsum is that it has a more-or-less normal letters.",
         },
         {
-          title: "Step 3: Launch",
+          title: "The Treatment Stage",
           description:
-            "Connecting thousands of service providers with consumers in an easy-to-use platform.",
+            "The point of using Lorem Ipsum is that it has a more-or-less normal letters.",
         },
       ],
     },
