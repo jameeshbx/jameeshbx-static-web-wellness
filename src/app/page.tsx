@@ -2,7 +2,7 @@ import React from 'react';
 import { Hero } from "./components/hero"
 import { RecommendedSection } from "./components/Recommendedsection"
 import Gallery from './components/Gallery';
-import Email from './components/Email';
+import Emailsection from './components/Emailsection';
 import TestimonialSection from './components/TestimonialSection';
 import { CategorySection } from './components/categorysection';
 import  CookieConsent  from './components/cookies'
@@ -16,8 +16,8 @@ const Home = () => {
       <CategorySection/>
       <Gallery/>      
       <RecommendedSection/>
+     <Emailsection/>
       <TestimonialSection/>
-      <Email/>
     </div>
   );
 };
