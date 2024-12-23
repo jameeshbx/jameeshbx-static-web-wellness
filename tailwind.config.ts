@@ -84,7 +84,13 @@ const config: Config = {
       },
       borderRadius: {
         '32': '32px', 
-      },    
+      },
+      
+      screens: {
+        
+        'md': '640px', 
+       
+      },
       
     },
   },
