@@ -14,10 +14,10 @@ export default function Email() {
           </div>
           
           <div className="lg:pl-8">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-secondary font-Playfair_Display">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-secondary font-playfair">
               Subscribe to newsletter
             </h2>
-            <p className="text-grey mb-8 lg:text-lg font-Manrope">
+            <p className="text-grey mb-8 lg:text-lg font-manrope">
               Sign up for our newsletter to stay up-to-date on the latest promotions,
               discounts, and new features releases.
             </p>

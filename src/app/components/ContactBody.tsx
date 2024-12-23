@@ -36,7 +36,7 @@ function ContactBody() {
                                             <img src={contact.icon} alt={contact.label} />
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-lg mb-1">{contact.label}</h3>
+                                            <h3 className="font-semibold font-playfair text-lg mb-1">{contact.label}</h3>
                                             <p className="text-gray-600 text-sm md:text-base">{contact.des}</p>
                                         </div>
                                     </div>

@@ -7,7 +7,7 @@ function ContactForm() {
             <section className="bg-pink py-16 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-2xl mx-auto mb-12">
-                        <p className="text-Manrope text-lg uppercase tracking-wider text-darkpink mb-4">
+                        <p className="text-manrope text-lg uppercase tracking-wider text-primary mb-4">
                             {contactForm.label}
                         </p>
                         <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-6">
@@ -71,7 +71,7 @@ function ContactForm() {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-gray-900  text-white py-3 rounded-md  ease-in-out"
+                                    className="w-full bg-purple  text-white py-3 rounded-md  ease-in-out"
                                 >
                                     SUBMIT
                                 </button>
