@@ -1,0 +1,10 @@
+stages:
+  - sync
+
+sync_to_github:
+  stage: sync
+  script:
+    - git remote add github https://jameeshbx:<secret>@github.com/jameeshbx/static-web-wellness.git
+    - git push --mirror github
+  only:
+    - main  # Or specify the branch you want to sync
