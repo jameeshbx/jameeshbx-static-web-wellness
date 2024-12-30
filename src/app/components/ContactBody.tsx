@@ -1,6 +1,7 @@
 import React from 'react'
 import { contactDetails, Contact } from '../data/contact'
 import { body } from '../data/contact'
+import Image from 'next/image'
 
 
 function ContactBody() {
@@ -11,7 +12,7 @@ function ContactBody() {
                     <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
 
                         <div className='pt-10' >
-                            <img src="contactimgs.png" alt="" />
+                            <Image src="contactimgs.png" alt="" />
                         </div>
 
 
@@ -33,7 +34,7 @@ function ContactBody() {
                                 {contactDetails.map((contact: Contact, index: number) => (
                                     <div className="flex items-start gap-4" key={index}>
                                         <div className="p-4 bg-white border-black border-2 item-center w-16 rounded-lg hidden md:flex">
-                                            <img src={contact.icon} alt={contact.label} />
+                                            <Image src={contact.icon} alt={contact.label} />
                                         </div>
                                         <div>
                                             <h3 className="font-semibold font-playfair text-lg mb-1">{contact.label}</h3>

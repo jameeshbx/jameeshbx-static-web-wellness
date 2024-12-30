@@ -1,5 +1,6 @@
 import React from "react";
 import { ABOUT_SECTION_DATA } from "../data/about";
+import Image from "next/image";
 
 const AboutSection = () => {
   const { image, text } = ABOUT_SECTION_DATA;
@@ -9,7 +10,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 max-w-4xl mx-auto">
           <div className="w-full lg:w-1/2 relative z-20">
-            <img
+            <Image
               src={image.src}
               alt={image.alt}
               className="w-full max-w-md mx-auto lg:max-w-none"

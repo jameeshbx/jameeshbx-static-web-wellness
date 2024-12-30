@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export function CategorySection() {
@@ -39,7 +40,7 @@ export function CategorySection() {
 
         <div className="flex flex-col items-center text-center rounded-lg">
           <div className="w-30 h-20 relative">
-            <img
+            <Image
               src={icons[currentIndex].src}
               alt={icons[currentIndex].alt}
               width={90}
@@ -74,7 +75,7 @@ export function CategorySection() {
               className="flex flex-col items-center text-center rounded-lg"
             >
               <div className="w-35 h-20 relative">
-                <img
+                <Image
                   src={icon.src}
                   alt={icon.alt}
                   width={80}

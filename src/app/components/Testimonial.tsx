@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { testimonials } from '../data/testimonials';
+import Image from 'next/image';
 
 interface Testimonial {
   name: string;
@@ -27,7 +28,7 @@ function Testimonial() {
   return (
     <section className="bg-tertionary py-12 sm:py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-       
+
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <p className="text-xs sm:text-sm uppercase text-primary tracking-wider">
             TESTIMONIALS
@@ -38,34 +39,34 @@ function Testimonial() {
         </div>
 
         <div className="relative rounded-2xl mx-auto overflow-hidden mb-8 sm:mb-12 md:mb-16 border-rounded">
-  <div className="bg-purple  grid grid-cols-1 lg:grid-cols-12 min-h-400 rounded-2xl">
-  
+          <div className="bg-purple  grid grid-cols-1 lg:grid-cols-12 min-h-400 rounded-2xl">
 
-          
+
+
             <div className="relative  lg:ml-76 lg:mt-75 lg:col-span-5 h-64 sm:h-80 lg:h-full flex items-center justify-center">
-            <div className="absolute left-4 sm:left-8 top-6 sm:top-12 flex space-x-2 sm:space-x-4">
-            <div className="relative lg:col-span-5 h-64 sm:h-80 lg:h-full flex items-center justify-center">
+              <div className="absolute left-4 sm:left-8 top-6 sm:top-12 flex space-x-2 sm:space-x-4">
+                <div className="relative lg:col-span-5 h-64 sm:h-80 lg:h-full flex items-center justify-center">
 
-  <div className="absolute left-4 sm:left-8 top-6 sm:top-12 flex space-x-2 sm:space-x-4">
-    <div className="w-3 md:-mt-85 lg:-mt-12 sm:w-6 md:w-12 lg:w-16 h-80 sm:h-160 md:h-180 lg:h-280 bg-white rounded-full" />
-    <div className="w-3 lg:-mt-12 md:-mt-85 sm:w-6 md:w-12 lg:w-16 h-100 sm:h-200 md:h-220 lg:h-360 bg-white rounded-full" />
-              </div>
-              </div>
+                  <div className="absolute left-4 sm:left-8 top-6 sm:top-12 flex space-x-2 sm:space-x-4">
+                    <div className="w-3 md:-mt-85 lg:-mt-12 sm:w-6 md:w-12 lg:w-16 h-80 sm:h-160 md:h-180 lg:h-280 bg-white rounded-full" />
+                    <div className="w-3 lg:-mt-12 md:-mt-85 sm:w-6 md:w-12 lg:w-16 h-100 sm:h-200 md:h-220 lg:h-360 bg-white rounded-full" />
+                  </div>
+                </div>
 
-               
-              <div className="absolute xs:-ml-103 lg:mt-10 sm:-m-20 sm:mt-6 sm:-ml-24 md:-mt-62 left-24 sm:left-32 top-8 sm:top-16 w-52 h-52 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden border-4 border-white">
-    <img
-      src={testimonial.image}
-      alt={`${testimonial.name}'s profile`}
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+
+                <div className="absolute xs:-ml-103 lg:mt-10 sm:-m-20 sm:mt-6 sm:-ml-24 md:-mt-62 left-24 sm:left-32 top-8 sm:top-16 w-52 h-52 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden border-4 border-white">
+                  <Image
+                    src={testimonial.image}
+                    alt={`${testimonial.name}'s profile`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="lg:col-span-7 p-6 sm:p-8 md:p-12 lg:p-20 text-white">
               <div>
-              <img className='sm:-ml-16 md:-ml-33' src="Heading.png" alt="" />
+                <Image className='sm:-ml-16 md:-ml-33' src="Heading.png" alt="" />
               </div>
               <div className="space-y-4 sm:space-y-6 md:mt-85">
                 <div className="space-y-1 sm:space-y-2 ">
@@ -80,17 +81,17 @@ function Testimonial() {
                   {testimonial.title}
                 </h2>
                 <p className="text-base sm:text-lg leading-relaxed font-Manrope text-tertionary">
-                  "{testimonial.quote}"
+                  `&ldquo;`{testimonial.quote}`&rdquo;`
                 </p>
                 <div>
-                <img className="ml-auto sm:ml-auto md:ml-auto lg:ml-auto" src="Headi.png" alt="" />
+                  <Image className="ml-auto sm:ml-auto md:ml-auto lg:ml-auto" src="Headi.png" alt="" />
 
                 </div>
               </div>
             </div>
           </div>
 
-          
+
           <div className="flex justify-center gap-4 mt-6 sm:mt-8">
             <button
               onClick={prevTestimonial}

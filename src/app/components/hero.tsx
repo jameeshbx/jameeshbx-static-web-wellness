@@ -1,5 +1,6 @@
 import React from 'react'
 import Searchsection from './Searchsection'
+import Image from 'next/image'
 
 
 export function Hero() {
@@ -10,7 +11,7 @@ export function Hero() {
         <div className="relative w-full lg:w-1/2 z-10 lg:pl-10">
           <div className="absolute max-w-screen-xl py-48  px-14 sm:px-14 lg:py-24 lg:pt-36  lg:-mr-14 lg:-ml-12">
             <div className="flex gap-2 items-center">
-              <img className="h-5" src="header-logo.png" alt="Header Logo" />
+              <Image className="h-5" src="header-logo.png" alt="Header Logo" />
               <p className="text-xs sm:text-sm font-normal font-manrope text-gray-300">
                 HAIR SALON, MASSEUSE, BEAUTY SALON
               </p>

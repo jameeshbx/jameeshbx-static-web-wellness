@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { links, contactDetails, socialMedia } from '../data/footer';
 import { UrlObject } from 'url';
+import Image from 'next/image';
 
 interface ExploreLink {
   href: string | UrlObject;
@@ -15,7 +16,7 @@ function Footer() {
         <div className="container mx-auto px-4 pt-4">
           <div className="flex flex-wrap items-center gap-4 sm:gap-8 md:gap-24 lg:gap-48">
             <div className="flex items-center gap-2 p-2 sm:p-4 lg:mx-2 md:mx-4 lg:px-4 md:px-6">
-              <img
+              <Image
                 className="h-8 sm:h-10 ml-4 sm:ml-6 md:ml-8 lg:ml-12"
                 src="header-logo.png"
                 alt="Header Logo"
@@ -34,7 +35,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border-2 border-lightpink text-white flex items-center justify-center"
                 >
-                  <img
+                  <Image
                     src={social.icon}
                     alt="social icon"
                     className=" object-contain"

@@ -1,5 +1,6 @@
 import React from "react";
 import { journeySectionData } from "../data/about";
+import Image from "next/image";
 
 export default function JourneySection() {
   const {
@@ -37,7 +38,7 @@ export default function JourneySection() {
                 {methodology.steps.map((step, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center mt-1">
-                      <img
+                      <Image
                         src={tickIcon}
                         alt="Tick"
                         className="w-8 h-8 text-primary"
@@ -59,7 +60,7 @@ export default function JourneySection() {
 
           {/* Right Content - Video Section */}
           <div className="flex items-end justify-end lg:w-full lg:aspect-video lg:h-full overflow-hidden mt-8 lg:mt-0 lg:ml-20">
-            <img
+            <Image
               src={videoThumbnail.src}
               alt={videoThumbnail.alt}
               className="w-full h-full object-cover"

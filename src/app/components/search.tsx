@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import React from "react"
 import { useState } from "react"
 
@@ -36,7 +37,7 @@ export default function SearchForm() {
                 onChange={(e) => setServiceName(e.target.value)}
                 required
               />
-              <img className="h-4 w-4 absolute right-2 bottom-2 opacity-60" src="search.png" alt="" />
+              <Image className="h-4 w-4 absolute right-2 bottom-2 opacity-60" src="search.png" alt="" />
             </div>
           </div>
 
@@ -57,7 +58,7 @@ export default function SearchForm() {
                 onChange={(e) => setAddress(e.target.value)}
                 required
               />
-              <img className="h-4 w-4 absolute right-2 bottom-2 opacity-60" src="location.png" alt="" />
+              <Image className="h-4 w-4 absolute right-2 bottom-2 opacity-60" src="location.png" alt="" />
             </div>
           </div>
 
@@ -66,7 +67,7 @@ export default function SearchForm() {
             className="w-full sm:w-auto px-6 py-6  p-5 text-base rounded-full bg-primary text-white font-medium transition-colors hover:primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 flex items-center justify-center gap-2"
           >
             Search
-            <img src="Vector.png" alt="" className="h-4 w-4" />
+            <Image src="Vector.png" alt="" className="h-4 w-4" />
           </button>
         </div>
       </form>

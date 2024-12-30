@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { cardData } from "../data/recommendeddata";
+import Image from "next/image";
 
 export function RecommendedSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +20,7 @@ export function RecommendedSection() {
         setVisibleCardsCount(2);
         setShowArrows(true);
       } // Hide arrows on desktop
-       else {
+      else {
         setVisibleCardsCount(4);
         setShowArrows(false); // Hide arrows on desktop
       }
@@ -83,7 +84,7 @@ export function RecommendedSection() {
               key={index}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow transition-transform duration-300"
             >
-              <img
+              <Image
                 className="rounded-t-lg object-cover w-full h-[200px] sm:h-[200px] lg:h-[250px]"
                 src={card.image}
                 alt={card.name}

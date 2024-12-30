@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { useState } from "react"
 
 
@@ -13,12 +14,12 @@ export default function SearchForm() {
   }
 
   return (
-   
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-900 bg-white lg:rounded-full  shadow-lg p-4 sm:p-8 md:p-8 lg:m-32 lg:p-4 "
-      >
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-900 bg-white lg:rounded-full  shadow-lg p-4 sm:p-8 md:p-8 lg:m-32 lg:p-4 "
+    >
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
         <div className="w-full md:w-40 lg:w-60 relative lg:ml-5">
           <label
             htmlFor="service-name"
@@ -36,10 +37,10 @@ export default function SearchForm() {
               onChange={(e) => setServiceName(e.target.value)}
               required
             />
-            <img 
-              className="h-4 w-4 absolute right-2 top-1/2 -translate-y-1/2 opacity-60" 
-              src="search.png" 
-              alt="" 
+            <Image
+              className="h-4 w-4 absolute right-2 top-1/2 -translate-y-1/2 opacity-60"
+              src="search.png"
+              alt=""
             />
           </div>
         </div>
@@ -61,25 +62,25 @@ export default function SearchForm() {
               onChange={(e) => setAddress(e.target.value)}
               required
             />
-            <img 
-              className="h-4 w-4 absolute right-2 top-1/2 -translate-y-1/2 opacity-60" 
-              src="location.png" 
-              alt="" 
+            <Image
+              className="h-4 w-4 absolute right-2 top-1/2 -translate-y-1/2 opacity-60"
+              src="location.png"
+              alt=""
             />
           </div>
         </div>
-     
-          <div className="w-full md:w-auto mt-4 md:mt-0 lg:-ml-24">
+
+        <div className="w-full md:w-auto mt-4 md:mt-0 lg:-ml-24">
           <button
             type="submit"
             className=" w-full md:w-auto px-6 py-3 lg:px-10 lg:py-6 text-sm font-medium rounded-full bg-primary text-white transition-colors hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 flex items-center justify-center gap-2 md:self-end"
           >
-              Search
-            <img src="Vector.png" alt="" />
-            </button>
-          </div>
+            Search
+            <Image src="Vector.png" alt="" />
+          </button>
         </div>
-      </form>
+      </div>
+    </form>
 
   )
 }

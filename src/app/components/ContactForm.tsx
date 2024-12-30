@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactForm } from "../data/contact";
-import { log } from "console";
+import Image from "next/image";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -36,36 +36,36 @@ function ContactForm() {
     setLoading(true);
     setSuccessMessage("");
     try {
-        const response = await fetch("/api/sendEmail", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                recipientEmail: data.email,
-                name: data.name,
-                phone: data.phone,
-                service: data.service,
-                note: data.note,
-            }),
-        });
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          recipientEmail: data.email,
+          name: data.name,
+          phone: data.phone,
+          service: data.service,
+          note: data.note,
+        }),
+      });
 
-        const result = await response.json();
+      const result = await response.json();
 
-        if (result.success) {
-            setSuccessMessage("Thank you! Your message has been sent.");
-            console.log(data.email);
-            
-        } else {
-            throw new Error(result.error || "Failed to send email.");
-        }
+      if (result.success) {
+        setSuccessMessage("Thank you! Your message has been sent.");
+        console.log(data.email);
+
+      } else {
+        throw new Error(result.error || "Failed to send email.");
+      }
     } catch (error) {
-        console.error(error);
-        alert("Something went wrong. Please try again.");
+      console.error(error);
+      alert("Something went wrong. Please try again.");
     } finally {
-        setLoading(false);
+      setLoading(false);
     }
-};
+  };
 
 
   return (
@@ -86,7 +86,7 @@ function ContactForm() {
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-14 mx-8">
               <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
                 <div className="relative">
-                  <img
+                  <Image
                     src="/contactuser.png"
                     alt=""
                     className="absolute left-3 top-3 h-5 w-5 text-gray-400"
@@ -102,7 +102,7 @@ function ContactForm() {
                   )}
                 </div>
                 <div className="relative">
-                  <img
+                  <Image
                     src="/contactemail.png"
                     alt=""
                     className="absolute left-3 top-3 h-5 w-5 text-gray-400"
@@ -118,7 +118,7 @@ function ContactForm() {
                   )}
                 </div>
                 <div className="relative">
-                  <img
+                  <Image
                     src="/contactphone.png"
                     alt=""
                     className="absolute left-3 top-3 h-5 w-5 text-gray-400"
@@ -134,7 +134,7 @@ function ContactForm() {
                   )}
                 </div>
                 <div className="relative">
-                  <img
+                  <Image
                     src="/contactbook.png"
                     alt=""
                     className="absolute left-3 top-3 h-5 w-5 text-gray-400"
@@ -150,7 +150,7 @@ function ContactForm() {
                   )}
                 </div>
                 <div className="relative">
-                  <img
+                  <Image
                     src="/contactnote.png"
                     alt=""
                     className="absolute left-3 top-3 h-5 w-5 text-gray-400"
