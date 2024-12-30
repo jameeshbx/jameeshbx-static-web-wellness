@@ -1,31 +1,37 @@
 "use client";
 import { useState, useEffect } from "react";
-import { cardData } from "../data/recommendeddata"; 
+import { cardData } from "../data/recommendeddata";
 
 export function RecommendedSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCardsCount, setVisibleCardsCount] = useState(4);
+  const [showArrows, setShowArrows] = useState(false);
 
-  
+  // Handle responsive card count and arrow visibility
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
+
       if (screenWidth < 640) {
         setVisibleCardsCount(1);
+        setShowArrows(true);
       } else if (screenWidth < 1024) {
         setVisibleCardsCount(2);
-      } else {
+        setShowArrows(true);
+      } // Hide arrows on desktop
+       else {
         setVisibleCardsCount(4);
+        setShowArrows(false); // Hide arrows on desktop
       }
     };
-    handleResize(); 
+
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
- 
   const visibleCards = [
     ...cardData.slice(currentIndex, currentIndex + visibleCardsCount),
     ...cardData.slice(0, Math.max(0, currentIndex + visibleCardsCount - cardData.length)),
@@ -52,15 +58,11 @@ export function RecommendedSection() {
       </p>
 
       <div className="relative flex flex-col items-center w-full lg:max-w-[1200px]">
-       
-        {visibleCardsCount < 4 && (
+        {showArrows && (
           <button
             onClick={goToPreviousCard}
             aria-label="Previous card"
-            disabled={visibleCardsCount === 1}
-            className={`absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 text-foreground lg:left-[-50px] sm:block ${
-              visibleCardsCount === 1 ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full text-black transition-all duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -135,15 +137,11 @@ export function RecommendedSection() {
           ))}
         </div>
 
-       
-        {visibleCardsCount < 4 && (
+        {showArrows && (
           <button
             onClick={goToNextCard}
             aria-label="Next card"
-            disabled={visibleCardsCount === 1}
-            className={`absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 text-foreground lg:right-[-50px] sm:block ${
-              visibleCardsCount === 1 ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-black transition-all duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,4 +159,3 @@ export function RecommendedSection() {
     </section>
   );
 }
-
