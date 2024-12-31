@@ -9,4 +9,4 @@ sync-to-github:
     - git config --global user.name "GitLab CI"
     - git config --global user.email "ci@example.com"
     - git remote add github https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git
-    - git push --force github
+    - git push --force github HEAD:main
