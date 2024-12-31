@@ -1,10 +1,12 @@
 stages:
   - sync
 
-sync_to_github:
+sync-to-github:
   stage: sync
-  script:
-    - git remote add github https://jameeshbx:$GITHUB_TOKEN@github.com/jameeshbx/jameeshbx-static-web-wellness.git
-    - git push --mirror github
   only:
-    - main  # Or specify the branch you want to sync
+    - main
+  script:
+    - git config --global user.name "GitLab CI"
+    - git config --global user.email "ci@example.com"
+    - git remote add github https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git
+    - git push --force github main
